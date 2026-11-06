@@ -1,0 +1,244 @@
+# Bof-All-The-Things
+Creating a repository with all public Beacon Object Files (BoFs)
+
+The idea is to collect all the Beacon Object Files (BoF ) projects that are out there (similar to my SharpAllTheThings project) that can be used in Cobalt Strike as inline execute command. Credit the name to the amazing PayloadAllTheThings github repo (https://github.com/swisskyrepo/PayloadsAllTheThings)
+
+### Interactive search 
+https://chryzsh.github.io/awesome-bof/site/
+
+### BOF Collections
+1. TrustedSec BOFS
+   * BOFS - arp, adcs_enum, adcs_enum_com, adcs_enum_com2, adv_audit_policies, cacls, dir, driversigs, enum_filter_driver, enumLocalSessions, env, findLoadedModule, get_password_policy, ipconfig, ldapsearch, listdns, listmods, listpipes, netstat, netuser, netuse_add, netuse_delete, netuse_list, netview, netGroupList, netGroupListMembers, netLocalGroupList, netLocalGroupListMembers, nslookup, reg_query, reg_query_recursive, routeprint, schtasksenum, schtasksquery, sc_enum, sc_qc, sc_qfailure, sc_qtriggerinfo, sc_query, sc_qdescription, tasklist, whoami, windowlist, wmi_query, netsession, resources, uptime, vssenum, adcs_request, chromeKey, enableuser, procdump, ProcessDestroy, ProcessListHandles, reg_delete, reg_save, reg_set, sc_config, sc_create, sc_delete, sc_description, sc_start, sc_stop, schtaskscreate, schtasksdelete, schtasksstop, setuserpass, shspawnas
+   * Credit - https://twitter.com/ajpc500
+   * Link - https://github.com/trustedsec/CS-Situational-Awareness-BOF and https://github.com/trustedsec/CS-Remote-OPs-BOF
+2. ajpc500 BOFs Collection
+   * BOFS - ETW Patching, Syscalls shellcode injection, API Function Utility, Spawn and Syscalls Shellcode Injection, Spawn and Syscalls Shellcode Injection (NtQuereApcThread), Static Syscalls Shellcode Injection, Static syscalls Process Dump,  curl
+   * Credit - https://twitter.com/ajpc500
+   * Link - https://github.com/ajpc500/BOFs
+3. Riccardo Ancarani BOFs Collection
+   * BOFS - send_shellcode_via_pipe, cat , wts_enum_remote_processes, unhook
+   * Credit - https://twitter.com/dottor_morte
+   * Link - https://github.com/RiccardoAncarani/BOFs
+4. rvrsh3ll BOFs Collection
+   * BOFS - GetDomainInfo, GetClipboard, dumpwifi, portscan, registryPersistence
+   * Credit - https://twitter.com/424f424f
+   * Link - https://github.com/rvrsh3ll/BOF_Collection
+4. Outflank BOFs Collection
+   * BOFS - AddMachineAccount, Askcreds, Domaininfo, Kerberoast, Lapsdump, Psw, Smbinfo, SprayAD, StartWebClient, Winver
+   * Credit - https://twitter.com/OutflankNL
+   * Link - https://github.com/outflanknl/C2-Tool-Collection
+5. REDMED-X - OperatorsKit
+   * BOFS - BlindEventlog, DllEnvHijacking, FindDotnet, FindHandle, FindLib, FindRWX, FindSysmon, HideFile, LoadLib, PSremote, SilenceSysmon
+   * Credit - Unknown at the moment
+   * Link - https://github.com/REDMED-X/OperatorsKit
+6. Adrenaline
+   * BOFs - ai_surface, clipboard_grab, window_handles_enum, notepad_grab, schtask_enum, session_view, certstore_loot, process_tokens_list, amsi_etw_detect, app_count, applocker_policy, asr_status, bitlocker_status, com_probe, mdm_policy_artifacts, netjoin_query, user_idle, wallpaper_enum, wef_detect, wevt_logon_enum, window_list, wsc_status, win_version
+   * Credit - Gavin K (atomiczsec)
+   * [https://github.com/atomiczsec/Adrenaline](https://github.com/atomiczsec/Adrenaline)
+7. Adaptix-Framework Extension-Kit
+   * BOFs - Too many to list
+   * Credit - RalfHacker
+   * Link - https://github.com/Adaptix-Framework/Extension-Kit
+
+### Execution
+1. tgtdelegation - obtain a usable TGT for the current user and does not require elevated privileges on the host
+   * Credit - https://twitter.com/33y0re
+   * Link - https://github.com/connormcgarr/tgtdelegation
+2. BOF.NET - A .NET Runtime for Cobalt Strike's Beacon Object Files
+   * Credit - https://twitter.com/_EthicalChaos_
+   * Link - https://github.com/CCob/BOF.NET
+3. InlineExecute-Assembly - proof of concept Beacon Object File (BOF) that allows security professionals to perform in process .NET assembly execution as an alternative to Cobalt Strikes traditional fork and run execute-assembly module
+   * Credit - https://twitter.com/anthemtotheego
+   * Link - https://github.com/anthemtotheego/InlineExecute-Assembly
+4. Inject-assembly - Execute .NET in an Existing Process. This tool is an alternative to traditional fork and run execution for Cobalt Strike. The loader can be injected into any process, including the current Beacon. Long-running assemblies will continue to run and send output back to the Beacon, similar to the behavior of execute-assembly.
+   * Credit - https://twitter.com/kyleavery_
+   * Link - https://github.com/kyleavery/inject-assembly
+5. BokuLoader -  A proof-of-concept Cobalt Strike Reflective Loader which aims to recreate, integrate, and enhance Cobalt Strike's evasion features! 
+   * Credit - https://twitter.com/0xBoku
+   * Link - https://github.com/boku7/BokuLoader
+
+### Situational Awareness
+1. FindObjects-BOF - A Cobalt Strike Beacon Object File (BOF) project which uses direct system calls to enumerate processes for specific modules or process handles.
+   * Credit - https://twitter.com/Cneelis
+   * Link - https://github.com/outflanknl/FindObjects-BOF
+2. DLL Image Resource Version Enumeration BOF - As the name suggest
+   * Credit - https://github.com/EspressoCake
+   * Link - https://github.com/EspressoCake/DLL_Version_Enumeration_BOF
+3. Firewall_Enumerator_BOF - This is meant as a supplement to interact with the Windows firewall via COM interfaces.
+   * Credit - https://github.com/EspressoCake
+   * Link - https://github.com/EspressoCake/Firewall_Walker_BOF
+4. Process Protection Level Enumerator BOF - A Syscall-only BOF file intended to grab process protection attributes, limited to a handful that Red Team operators and pentesters would commonly be interested in.
+   * Credit - https://github.com/EspressoCake
+   * Link - https://github.com/EspressoCake/Process_Protection_Level_BOF
+5. xPipe - Cobalt Strike Beacon Object File (BOF) to list active Pipes & return their Owner & Discretionary Access Control List (DACL) permissions.
+   * Credit - https://twitter.com/0xBoku
+   * Link - https://github.com/boku7/xPipe
+6. WhereAmiI - Cobalt Strike Beacon Object File (BOF) that uses handwritten shellcode to return the process Environment strings without touching any DLL's.
+   * Credit - https://twitter.com/0xBoku
+   * Link - https://github.com/boku7/whereami
+7. Readfile - As the name suggests
+   * Credit - https://twitter.com/trainr3kt
+   * Link - https://github.com/trainr3kt/Readfile_BoF
+8. ChromiumKeyDump - BOF implementation of Chlonium tool to dump Chrome/Edge Masterkey and download Cookie/Login Data files
+   * Credit - https://twitter.com/cryptopeg
+   * Link - https://github.com/crypt0p3g/bof-collection
+9. LdapSignCheck - Beacon Object File to scan a Domain Controller to see if LdapEnforceChannelBinding or LdapServerIntegrity has been modified to mitigate against relaying attacks.
+   * Credit - https://twitter.com/cube0x0
+   * Link - https://github.com/cube0x0/LdapSignCheck
+10. ScreenshotBOF - An alternative screenshot capability for Cobalt Strike that uses WinAPI and does not perform a fork & run. Screenshot downloaded in memory.
+    * Credit - https://twitter.com/codex_tf2
+    * Link - https://github.com/CodeXTF2/ScreenshotBOF
+11. ASRenum - Identify ASR rules, actions, and exclusion locations
+   * Credit - https://twitter.com/mlcsec
+   * Link - https://github.com/mlcsec/ASRenum-BOF
+
+### Persistence
+1. PersistBOF - A tool to help automate common persistence mechanisms. Currently supports Print Monitor (SYSTEM), Time Provider (Network Service), Start folder shortcut hijacking (User), Junction Folder (User), Xll Add-In (User).
+   * Credit - https://twitter.com/i/flow/login?redirect_after_login=%2FN4k3dTurtl3
+   * Link - https://github.com/N4kedTurtle/PersistBOF
+2. BOF_Collection - Persistence via Registry
+   * Credit - https://twitter.com/424f424f
+   * Link - https://github.com/rvrsh3ll/BOF_Collection
+ 
+### Privilege Escalation
+1. kernel-mii - Cobalt Strike (CS) Beacon Object File (BOF) foundation for kernel exploitation using CVE-2021-21551.
+   * Credit - https://twitter.com/tijme
+   * Link - https://github.com/tijme/kernel-mii
+2. amd-ryzen-master-driver-v17-exploit - Cobalt Strike (CS) Beacon Object File (BOF) for kernel exploitation using AMD's Ryzen Master Driver (version 17).
+   * Credit - https://twitter.com/tijme
+   * Link - https://github.com/tijme/amd-ryzen-master-driver-v17-exploit
+3. PrivKit - PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
+   * Credit - https://twitter.com/merterpreter
+   * Link - https://github.com/mertdas/PrivKit
+
+### Defense Evasion
+1. WdToggle - A Proof of Concept Cobalt Strike Beacon Object File which uses direct system calls to enable WDigest credential caching and circumvent Credential Guard (if enabled).
+   * Credit - https://twitter.com/Cneelis
+   * Link - https://github.com/outflanknl/WdToggle
+2. InlineWhispers2 - Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF) via Syswhispers2.
+   * Credit - https://twitter.com/Sh0ckFR
+   * Link - https://github.com/Sh0ckFR/InlineWhispers2
+3. HOLLOW - Beacon Object File (BOF) that spawns an arbitrary process from beacons memory in a suspended state, inject shellcode, hijack main thread with APC, and execute shellcode; using the Early Bird injection
+   * Credit - https://twitter.com/0xBoku
+   * Link - https://github.com/boku7/HOLLOW
+4. secinject - Beacon Object File (BOF) that leverages Native APIs to achieve process injection through memory section mapping.
+   * Credit - https://twitter.com/apokryptein
+   * Link - https://github.com/apokryptein/secinject
+5. unhook-bof - This is a Beacon Object File to refresh DLLs and remove their hooks. The code is from Cylance's Universal Unhooking research.
+   * Credit - https://twitter.com/joevest
+   * Link - https://github.com/Cobalt-Strike/unhook-bof
+6. Self_Deletion_BOF - BOF implementation of the research by @jonasLyk for executable self deletion. 
+   * Credit - https://github.com/EspressoCake
+   * Link - https://github.com/EspressoCake/Self_Deletion_BOF
+7. Toggle_Token_Privileges_BOF - An (almost) syscall-only BOF file intended to either add or remove token privileges within the context of your current process.
+   * Credit - https://github.com/EspressoCake
+   * Link - https://github.com/EspressoCake/Toggle_Token_Privileges_BOF
+8. Inject ETW Bypass - Inject ETW Bypass into Remote Process via Syscalls (HellsGate|HalosGate)
+   * Credit - https://twitter.com/0xBouk
+   * Link - https://github.com/boku7/injectEtwBypass
+9. Inject AMSI Bypass - Cobalt Strike Beacon Object File (BOF) that bypasses AMSI in a remote process with code injection.
+   * Credit - https://twitter.com/0xBouk
+   * Link - https://github.com/boku7/injectAmsiBypass
+10. Trusted Path UAC Bypass - Beacon object file implementation for trusted path UAC bypass. The target executable will be called without involving "cmd.exe" by using DCOM object.
+   * Credit - https://twitter.com/netero_1010
+   * Link - https://github.com/netero1010/TrustedPath-UACBypass-BOF
+11. Detect-Hooks - Detect-Hooks is a proof of concept Beacon Object File (BOF) that attempts to detect userland API hooks in place by AV/EDR
+   * Credit - https://twitter.com/anthemtotheego
+   * Link - https://github.com/xforcered/Detect-Hooks
+12. Defender Exclusions BOF - A BOF to determine Windows Defender exclusions. 
+    * Credit - https://twitter.com/the_bit_diddler
+    * Link - https://github.com/EspressoCake/Defender_Exclusions-BOF
+13. ASRenum-BOF - Cobalt Strike BOF that identifies Attack Surface Reduction (ASR) rules, actions, and exclusion locations.
+    * Credit - https://twitter.com/mlcsec
+    * Link - https://github.com/mlcsec/ASRenum-BOF
+14. CobaltWhispers -  CobaltWhispers is an aggressor script that utilizes a collection of Beacon Object Files (BOF) for Cobalt Strike to perform process injection, persistence and more, leveraging direct syscalls (SysWhispers2) to bypass EDR/AV.
+    * Credit - https://twitter.com/cerbersec
+    * Link - https://github.com/NVISOsecurity/CobaltWhispers
+
+### Credential Access
+1. Cobalt-Clip - Cobalt-Clip is clipboard add-on for Cobalt Strike to interact with the victim's clipboard. With Cobalt-Clip you can dump, edit and monitor the content of a clipboard.
+   * Credit - https://github.com/DallasFR
+   * Link - https://github.com/DallasFR/Cobalt-Clip
+2. PPLDump BOF - A fully-fledged BOF to dump an arbitrary protected process.
+   * Credit - https://github.com/EspressoCake
+   * Link - https://github.com/EspressoCake/PPLDump_BOF
+3. NoteThief - Grab unsaved Notepad contents with a Beacon Object File
+   * Credit - https://twitter.com/trainr3kt
+   * Link - https://github.com/trainr3kt/NoteThief
+4. CredManBOF - dumping the credential manager by abusing the SeTrustedCredmanAccess Privilege
+   * Credit - https://twitter.com/Pullerze
+   * Link - https://github.com/jsecu/CredManBOF
+5. CredBandit - redBandit is a proof of concept Beacon Object File (BOF) that uses static x64 syscalls to perform a complete in memory dump of a process and send that back through your already existing Beacon
+   * Credit - https://twitter.com/anthemtotheego
+   * Link - https://github.com/xforcered/CredBandit
+6. BofRoast - Beacon Object File repo for roasting Active Directory
+   * Credit - https://twitter.com/cube0x0
+   * Link - https://github.com/cube0x0/BofRoast
+7. Silent Lsass Dump - Dump Lsass using Slient Process method
+   * Credit - https://github.com/guervild
+   * Link - https://github.com/guervild/BOFs
+8. aad_prt - extract Azure AD PRT tokens
+   * Credit - https://twitter.com/wotwot563
+   * Link - https://github.com/wotwot563/aad_prt_bof
+9. Cookie-Graber-BOF - C or BOF file to extract WebKit master key to decrypt user cookie.
+   * Credit - https://twitter.com/MrUn1k0d3r
+   * Link - https://github.com/Mr-Un1k0d3r/Cookie-Graber-BOF
+10. LSA Whisperer BOF - A Beacon Object File (BOF) that talks directly to Windows authentication packages through the LSA untrusted/trusted client interface, without touching LSASS process memory.
+   * Credit - Arun Nair (dazzyddos)
+   * Link - [https://github.com/Mr-Un1k0d3r/Cookie-Graber-BOF](https://github.com/dazzyddos/lsawhisper-bof)
+
+### Lateral Movement
+1. DCOM Lateral Movement -  quick PoC that uses DCOM (ShellWindows) via beacon object files for lateral movement.
+   * Credit - https://twitter.com/Yas_o_h
+   * Link - https://github.com/Yaxser/CobaltStrike-BOF
+2. WMI Lateral Movement -  quick PoC that uses WMI (Win32_Process and Event Subscription) via beacon object files for lateral movement.
+   * Credit - https://twitter.com/Yas_o_h
+   * Link - https://github.com/Yaxser/CobaltStrike-BOF
+3. ServiceMove-BOF -  Lateral movement technique by abusing Windows Perception Simulation Service to achieve DLL hijacking
+   * Credit - https://twitter.com/netero_1010
+   * Link - https://github.com/netero1010/ServiceMove-BOF
+4. DelegationBOF -  This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently, it supports RBCD, Constrained, Constrained w/Protocol Transition, and Unconstrained Delegation checks.
+   * Credit - https://twitter.com/N4k3dTurtl3
+   * Link - https://github.com/IcebreakerSecurity/DelegationBOF
+5. RDPHijack-BOF - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
+    * Credit - https://twitter.com/netero_1010
+    * Link: https://github.com/netero1010/RDPHijack-BOF
+
+### Exfiltration
+
+### Other Projects
+1. DLL Exports Extraction BOF - As the name suggests
+   * Credit - https://github.com/EspressoCake
+   * Link - https://github.com/EspressoCake/DLL-Exports-Extraction-BOF
+2. DLL Hijack Search Order BOF - As the name suggests
+   * Credit - https://github.com/EspressoCake
+   * Link - https://github.com/EspressoCake/DLL-Hijack-Search-Order-BOF
+3. PE Import Enumerator BOF - As the name suggests
+   * Credit - https://github.com/EspressoCake
+   * Link - https://github.com/EspressoCake/DLL_Imports_BOF
+4. Sleeper - BOF to call the SetThreadExecutionState function to prevent host from Sleeping
+   * Credit - https://twitter.com/cryptopeg
+   * Link - https://github.com/crypt0p3g/bof-collection
+
+### BOF Builders
+1. BOF Template - This repository is meant to host the core files needed to create a Beacon Object File for use with Cobalt Strike. 
+   * Credit - https://twitter.com/joevest
+   * Link - https://github.com/Cobalt-Strike/bof_template
+2. BOF-Builder - C# .Net 5.0 project to build BOF (Beacon Object Files) in mass based on them all being in a folder directory struct somewhere.
+   * Credit - https://twitter.com/Ceramicskate0
+   * Link - https://github.com/ceramicskate0/BOF-Builder
+3. Visual-Studio-BOF-template - baseline template that can be reused to develop BOFs with Visual Studio without having to worry about dynamic function resolution syntax, stripping symbols, compiler configurations, C++ name mangling, or unexpected runtime errors
+   * Credit - https://securify.nl/
+   * Link - https://github.com/securifybv/Visual-Studio-BOF-template
+4. BOF Creation Helper - I knocked together this script to make the process of making BOFs slightly easier.
+   * Credit - https://dtm.uk/
+   * Link - https://github.com/dtmsecurity/bof_helper
+
+
+### BOF in Other Lang
+1. Invoke-Bof - Load any Beacon Object File using Powershell!
+   * Credit - https://github.com/airbus-cert
+   * Link - https://github.com/airbus-cert/Invoke-Bof
+2. BOF-Nim
+   * Credit - https://twitter.com/byt3bl33d3r
+   * Link - https://github.com/byt3bl33d3r/BOF-Nim
